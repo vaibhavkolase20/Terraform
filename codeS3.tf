@@ -15,7 +15,7 @@ resource "aws_instance" "myserver" {
     vpc_security_group_ids = [ "sg-0a7c002efafb49d30" ]
     availability_zone = "us-east-1b"
     tags = {
-      name = "ram"
+      Name = "ram"
       env = "dev"
     }
 }
