@@ -169,3 +169,17 @@ value = var.devops_op_trainer
 output "aws_ec2_info" {
 value = var.aws_ec2_object
 }
+
+
+===================================================================================================
+
+# how to change variable in defrrent way
+1) go to your variable file and make there following changes
+
+        ariable "devops_op_trainer" {}
+2) go to main file and change there following
+        
+output "devops_op_trainer" {
+value = var.devops_op_trainer
+}
+export TF_VAR_devops_op_trainer="jay mahakali" ===== this is the command of change the variable 
