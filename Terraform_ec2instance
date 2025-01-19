@@ -1,0 +1,25 @@
+# how to make instances using terraform
+
+1) create variable file and there below code
+
+variable "aws_ec2_object" {
+ type = object ({
+        name = string
+        incetances = number
+        keys = list(string)
+        ami = string
+})
+
+default = {
+        name = "test_ec2_instance"
+        incetances = 1
+        keys = ["key.pem1","key.pem2"]
+        ami = "ubuntu-afed34"
+}
+}
+
+2) create main file and there below code
+
+  output "devops_trainer" {
+value = var.aws_ec2_object
+}
