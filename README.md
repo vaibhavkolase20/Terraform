@@ -1,4 +1,4 @@
-# GOwto install terraform
+# GO to install terraform
 # Terraform Installation and Commands
 
 Terraform is an open-source software tool that helps users configure and manage infrastructure as code (IaC)
