@@ -3,7 +3,7 @@
 
 Terraform is an open-source software tool that helps users configure and manage infrastructure as code (IaC)
 
-*** Install Terraform on Linux/ubuntu Using Package Repository ***
+# *** Install Terraform on Linux/ubuntu Using Package Repository ***
 
 wget -O- https://apt.releases.hashicorp.com/gpg | gpg --dearmor | sudo tee /usr/share/keyrings/hashicorp-archive-keyring.gpg
 
