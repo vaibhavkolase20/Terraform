@@ -26,3 +26,7 @@ resource "docker_container" "nginx" {
         external = 80
 }
 }
+
+# install docker after cloning this code  because docker need to this task otherwise it give you error
+
+1) apt-get install docker.io == this is the command for install docker
