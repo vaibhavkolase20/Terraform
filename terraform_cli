@@ -1,0 +1,45 @@
+# how to insttall terraform aws cli
+1) coppy this repogitory 
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+2) install unzip command using bellow command
+sudo apt update
+sudo apt install unzip
+3) unzip  this file using command
+unzip awscliv2.zip
+4) install this package
+sudo ./aws/install
+===================================================================
+# 1) go to iam service and create there one user and give him to s3fullacess and adminestraative permisstion
+  2) aws configure == this command to configure s3
+  
+AKIASFUIRP4YV4T72YHA == this is a Access key
+
+K+l6gdxenZXBfBomgLQPwbNNxSh7memiJZH2Cnz8 === this is a Secret access key
+3) after using this command use bellow command
+export AWS_ACCESS_KEY_ID=AKIASFUIRP4YV4T72YHA
+export AWS_SECRET_ACCESS_KEY=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
+
+4) create one directory and in this directory crete one file put inthis file bellow code to create ec2 instance
+
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = ">= 4.16"
+    }
+  }
+  required_version = ">= 1.2.0"
+}
+
+provider "aws" {
+  region = "us-east-1"
+}
+
+resource "aws_instance" "my_ec2_instance" {
+  ami           = "ami-0e2c8caa4b6378d8c"
+  instance_type = "t2.micro"
+  tags = {
+    Name = "terraformBatch-instance"
+  }
+}
+
