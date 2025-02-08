@@ -15,3 +15,7 @@ resource "aws_instance" "myserver" {
       env = "dev"
     }
 }
+
+
+# After enter this code terraform give you error which error will be 
+  your ec2 have not any terraform role then go to your iam service and create one role give this role to ec2-fullacess and attachc to instance
