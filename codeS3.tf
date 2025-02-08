@@ -1,3 +1,23 @@
+# using this code you can create s3 bucket
+
+resource "aws_s3_bucket" "my_s3_bucket" {
+  bucket = "terraform-ram-batch-123-unique"  # Make sure to use a unique bucket name
+  tags = {
+    name        = "ramtrain-bucket"
+    Environment = "Dev"  # Corrected spelling
+  }
+}
+=========================================================================================================================================
+
+
+
+
+
+
+
+
+
+
 terraform {
   backend "s3" {
     bucket = "lokal-1"
