@@ -39,3 +39,7 @@ resource "aws_instance" "myserver" {
       env = "dev"
     }
 }
+
+
+# this is a url of documentation how to build  bucket
+  https://chatgpt.com/share/67c42484-51c4-800f-9b12-d0584bf40434
