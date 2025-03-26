@@ -20,6 +20,7 @@ Launch an EC2 instance manually from the AWS console. This instance will be used
 3. Verify Terraform installation:
    ```bash
    terraform version
+4. create one IAM role and attach to your incetance 
    ```
 
 ## **Step 3: Create a Directory and Terraform Configuration File**
@@ -37,8 +38,6 @@ Launch an EC2 instance manually from the AWS console. This instance will be used
 ```hcl
 provider "aws" {
   region     = "us-east-1"
-  access_key = "PUT_YOUR_ACCESS_KEY_HERE"
-  secret_key = "PUT_YOUR_SECRET_KEY_HERE"
 }
 
 # Create VPC
